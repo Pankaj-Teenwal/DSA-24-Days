@@ -4,10 +4,17 @@
  * o/p:-pankj
  */
 
-let array = ['p','a','n','k','j']
 
-const output = array.filter((item)=>{
-    if(!(output.includes(item))){
-        return item;
-    }
-})
+const removeDuplicate = (arr)=>{
+    let result = [];
+    const output = arr.filter((item)=>{
+        if(!(result.includes(item))){
+            result.push(item);
+        }
+    })
+
+    return result;
+}
+
+const arr = ['p','a','n','k','a','j','k','u','m','a','r','m','d','w','1','9','9','8'];
+ console.log(removeDuplicate(arr));
