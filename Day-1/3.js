@@ -5,10 +5,10 @@
  */
 
 
-const removeDuplicate = (arr)=>{
+const removeDuplicate = (arr) => {
     let result = [];
-    const output = arr.filter((item)=>{
-        if(!(result.includes(item))){
+    arr.filter((item) => {
+        if (!(result.includes(item))) {
             result.push(item);
         }
     })
@@ -16,5 +16,5 @@ const removeDuplicate = (arr)=>{
     return result;
 }
 
-const arr = ['p','a','n','k','a','j','k','u','m','a','r','m','d','w','1','9','9','8'];
- console.log(removeDuplicate(arr));
+const arr = ['p', 'a', 'n', 'k', 'a', 'j', 'k', 'u', 'm', 'a', 'r', 'm', 'd', 'w', '1', '9', '9', '8'];
+console.log(removeDuplicate(arr));
