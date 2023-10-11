@@ -4,20 +4,42 @@
  * approach 1- check that second string inclues every elements of the string 1.
  */
 
+// const checkAnnagram = (str1, str2)=>{
+//     if(!(str1.length === str2.length)){
+//         return "Not a annagram";
+//     }
+//     let charMapping = {};
+//     for(let item of str1){
+//         if(charMapping.hasOwnProperty(item)){
+//             charMapping[item] = charMapping[item]+1;
+//         }
+//         else{
+//             charMapping[item] = 1
+//         }
+//     }
+
+//     for(let char of str2){
+//         if(!charMapping[char]){
+//             return false;
+//         }
+
+//         charMapping[char]--;
+//     }
+
+//     return true;
+
+
+
+// }
+
+
+
 const checkAnnagram = (str1, str2)=>{
-    if(!(str1.length === str2.length)){
-        return "Not a annagram";
-    }
-    str1 = str1.split("");
-    str2 = str2.split("");
-    for(let i=0; i<str1.length; i++){
-        if(!(str2.includes(str1[i])))
-        {
-            return false;
-        }
-        return true;
-    }
+    let resultStr1 = str1.split("").sort().join("")
+    let resultStr2 = str2.split("").sort().join("")
+    return resultStr1 === resultStr2
 }
+
 
 str1='racecar';
 str2='carrace';

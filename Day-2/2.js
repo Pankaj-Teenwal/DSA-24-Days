@@ -5,13 +5,18 @@
 
 
 
-const findFectorial = (num)=>{
-    if(num===0){return 1;}
-    BigInt= fectorial = 1;
-    for(let i=1;i<=num; i++){
-        fectorial = fectorial*i; 
+const findFactorial = (num)=>{
+
+    if(num === 0){
+        return 1;
     }
-    return fectorial;
+
+    let factorial = 1;
+
+    for(let i=1; i<=num; i++){
+        factorial = factorial*i
+    }
+    return factorial
 }
 
-console.log(findFectorial(23));
+console.log(findFactorial(12));
