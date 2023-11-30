@@ -6,14 +6,13 @@
  */
 
 
+let inputArr = [1,2,3,4,1,'a','f','g','e','t','e','w','u','b','u','a'];
 
+const removeDuplicate =(inputArr)=>{
+    const resultSet = new Set(inputArr)
+    // return `Result array is ${resultSet.keys()} & size is ${resultSet.size}`
 
-
-
-const removeDuplicates = (str)=>{
-    let set;
-    return (set = new Set(str).size);
-
+    return resultSet.keys() , resultSet.size
 }
 
-console.log(removeDuplicates("pankajAPNK1223554SqUErtesop1273"))
+console.log(removeDuplicate(inputArr))

@@ -8,15 +8,24 @@
  * step-2: then we simply remove last element of the string and concat that elament to the empty string.
  */
 
-const reverseString = (str)=>{
-    str = str.split("");
-    let output ='';
-    for(let i= str.length-1; i>=0; i--){
-        output+=str[i];
-    }
-return output;
-}
+// const reverseString = (str)=>{
+//     str = str.split("");
+//     let output ='';
+//     for(let i= str.length-1; i>=0; i--){
+//         output+=str[i];
+//     }
+// return output;
+// }
+
+// let string = 'pankaj kumar123';
+
+// console.log(reverseString(string));
+
+
 
 let string = 'pankaj kumar123';
 
-console.log(reverseString(string));
+string = string.split(" ");
+
+string = string.reverse().join(" ")
+console.log(string);

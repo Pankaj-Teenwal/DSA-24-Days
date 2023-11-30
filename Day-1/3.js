@@ -5,15 +5,17 @@
  */
 
 
-const removeDuplicate = (arr) => {
-    let result = [];
-    arr.filter((item) => {
-        if (!(result.includes(item))) {
-            result.push(item);
+const removeDuplicate =(arr)=>{
+
+    let resultArr = [];
+
+    arr.filter((item)=>{
+        if(!resultArr.includes(item)){
+            resultArr.push(item)
         }
     })
 
-    return result;
+    return resultArr;
 }
 
 const arr = ['p', 'a', 'n', 'k', 'a', 'j', 'k', 'u', 'm', 'a', 'r', 'm', 'd', 'w', '1', '9', '9', '8'];
