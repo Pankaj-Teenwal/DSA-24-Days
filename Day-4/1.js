@@ -12,25 +12,23 @@
 
 
 const findVowelsCounter = (str)=>{
-    str = str.split("");
+    str = str.toLowerCase().split("");
 
-    let vowelCounter = 0;
-    let vowelArray = [];
-
-    for(let i=0; i<str.length;i++){
-
-        if(vowelArray.includes(str[i])){
-            vowelCounter++;
-            continue;
-        }
-        if(str[i]==='a' || str[i]==='e' || str[i]==='i' || str[i]==='o' || str[i]==='u'){
-            vowelArray.push(str[i]);
-            vowelCounter ++;
+    let resultObj = {};
+    console.log(str)
+    for(let i=0;i<str.length;i++){
+        if(str[i]==='a' || str[i]==='e' || str[i]==='i'||str[i]==='o' ||str[i]==='u'){
+            if(resultObj.hasOwnProperty(str[i])){
+                resultObj[str[i]] = resultObj[str[i]]+1
+            }
+            else{
+                resultObj[str[i]] = 1
+            }
         }
     }
-    return `vowels are ${vowelArray} and the number of the vowel are ${vowelCounter}`
+    
+    return resultObj;
 }
-
-let input = "subhama"
+let input = "Hii subhama how are you"
 
 console.log(findVowelsCounter(input));
